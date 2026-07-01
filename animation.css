@@ -1,0 +1,72 @@
+.navbar a, .navbar ul li{
+    opacity: 0;
+    animation: slideRight 1.5s ease-in-out forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes slideRight {
+    0%{
+        opacity: 0;
+        transform: translatex(-150px);
+    }
+    100%{
+        opacity: 1;
+        transform: translatex(0);
+    } 
+}
+/* NAVBAR ANIMATION ENDS HERE */
+
+/* IMAGE ANIMATION */
+.hero-image img{
+    opacity: 0;
+    animation: zoomBounce 2s ease-in forwards;
+    animation-delay: 0.6s;
+}
+@keyframes zoomBounce{
+    0%{
+        opacity: 0;
+        transform: scale(0.5) rotate(-20deg);
+    }
+    50%{
+        transform: scale(1) rotate(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+/* IMAGE ANINIMATION ENDS HERE */
+
+/* HERO CONTENT ANIMATION START HERE */
+.hero-content> *{
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translatey(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+/* STATS ANIMATION STARTS HERE */
+.state{
+    opacity: 0;
+    animation: slideBottom 1s ease-in-out forwards;
+    animation-delay: calc(0.3s * var(--i));
+}
+@keyframes slideBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(-110px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* STATS ANIMATION ENDS HERE */
